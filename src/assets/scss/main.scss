@@ -1,0 +1,65 @@
+@import "./_variables.scss";
+@import "bootstrap";
+@import "./_overrides.scss";
+@import "./_utilities.scss";
+@import "./loaders.scss";
+
+body{
+  overscroll-behavior: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  &:not(:placeholder-shown) {
+    &:valid {
+      border: 1px solid $success;
+    }
+    &:invalid {
+      border: 1px solid $danger;
+    }
+  }
+}
+
+form:invalid button[type="submit"] {
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.hero{
+  height: 80vh;
+  background-image: url(https://images.unsplash.com/photo-1601325561150-3102333057f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80);
+  background-size: cover;
+}
+
+.card-image{
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.restaurant-hero{
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  border: 5px solid black;
+
+}
